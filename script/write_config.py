@@ -89,6 +89,7 @@ class ConfigValue:
         key = line_splitted.pop(0).strip()
         marking = ""
         if "[" in key:
+            print("the key:", key, "split by [:", key.split("["))
             key, marking = key.split("[")
             marking = marking[1:-1]
         value = cls(
